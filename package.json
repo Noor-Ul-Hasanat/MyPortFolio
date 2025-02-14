@@ -2,7 +2,8 @@
   "name": "my-portfolioo",
   "version": "0.1.0",
   "private": true,
-   "homepage": "https://noor-ul-hasanat.github.io/MyPortFolio",
+  "homepage": "https://noor-ul-hasanat.github.io/MyPortFolio",
+
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
