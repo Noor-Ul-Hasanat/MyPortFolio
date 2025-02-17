@@ -4,6 +4,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens:{
+        'xs': '500px'
+      },
       colors: {
         brand: {
           blue1: '#070e40',

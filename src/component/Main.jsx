@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect,useRef} from 'react'
 import FacebookSharpIcon from '@mui/icons-material/FacebookSharp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
@@ -19,6 +19,57 @@ import bgwebdesign from '../assets/webdesign.jpg'
 import bgwebdevo from '../assets/webdevelopment.jpg'
 import bgmobdevlop from '../assets/mob-development.png'
 import bggraphics from '../assets/graphics.jpg'
+
+// FUNCTION FOR CURSER ANIMATION
+function CursorDot() {
+  const dotRef = useRef(null);
+  const mouseX = useRef(0);
+  const mouseY = useRef(0);
+  const posX = useRef(0);
+  const posY = useRef(0);
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      mouseX.current = e.clientX;
+      mouseY.current = e.clientY;
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    const animate = () => {
+    
+      posX.current += (mouseX.current - posX.current) * 0.1;
+      posY.current += (mouseY.current - posY.current) * 0.1;
+
+      if (dotRef.current) {
+        dotRef.current.style.transform = `translate(${posX.current}px, ${posY.current}px)`;
+      }
+      requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  return (
+    <div ref={dotRef} className="fixed top-0 left-0 pointer-events-none z-50">
+      <div className="w-3 h-3 bg-white rounded-full" />
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <div className="cursor-none">
+      <CursorDot />
+      <div className="h-screen flex items-center justify-center">
+        <h1 className="text-2xl">Move your cursor!</h1>
+      </div>
+    </div>
+  );
+}
+
+
 
 
 export const Main = () => {
@@ -81,14 +132,32 @@ export const Main = () => {
   const [open,setIsopen] = useState(false)
 const handelopen =()=>{
   setIsopen(!open)
-  console.log(open)
+
 }
+
+   
+const [heading, setHeading] = useState('veloper');
+const iterationRef = useRef(0);
+
+const handleAnimationIteration = () => {
+  iterationRef.current += 1;
+  // Since we are using alternate-reverse,
+  // odd iterations are reverse (erasing) cycles.
+  if (iterationRef.current % 2 === 1) {
+    setHeading(prev => (prev === 'veloper' ? 'signer' : 'veloper'));
+  }
+};
+
+   
+
   return (
+
     <div className='w-full min-h-screen font-sans'>
+      <CursorDot/>
       {/* NAVBAR START */}
-      <div className=" bg-blue-950 px-12 fixed w-full z-50 flex items-center h-[120px]" >
+      <div className=" bg-blue-950 px-12 fixed w-full z-50 flex items-center h-[80px] md:h-[120px] " >
         <div className=" py-6 text-white w-full lg:w-[30%]">
-          <h1 className="text-4xl font-bold">NOOR UL HASANAT</h1>
+          <h1 className="text-xl xs:text-4xl font-bold">NOOR UL HASANAT</h1>
           </div>
           <div className="hidden lg:flex space-x-7   justify-end pr-4 text-white w-[50%]">
             <a href="#home" onClick={(e) => handleScroll(e, 'home')}>HOME</a>
@@ -133,7 +202,7 @@ const handelopen =()=>{
               </div>
               <h3 className="lg:text-6xl text-4xl font-bold text-white mt-2 mb-6">
                 HAY I'M HASANAT </h3>
-              <h1 className=" lg:text-6xl text-5xl mt-2 font-bold text-blue-500">I'M A DESIGNER</h1>
+              <h1 className=" lg:text-6xl text-5xl mt-2 font-bold text-blue-500" id='has'  onAnimationIteration={handleAnimationIteration}>I'M A De{heading}</h1>
               <h6 className="text-white my-8  font-semibold lg:text-xl text-lg">Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment.
               </h6>
               </div>
