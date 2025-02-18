@@ -155,31 +155,31 @@ const handleAnimationIteration = () => {
     <div className='w-full min-h-screen font-sans'>
       <CursorDot/>
       {/* NAVBAR START */}
-      <div className=" bg-blue-950 px-12 fixed w-full z-50 flex items-center h-[80px] md:h-[120px] " >
-        <div className=" py-6 text-white w-full lg:w-[30%]">
-          <h1 className="text-xl xs:text-4xl font-bold">NOOR UL HASANAT</h1>
+      <div className=" bg-blue-950 px-12 fixed w-full z-50 flex items-center h-[80px] md:h-[120px]  " >
+        <div className=" py-6 text-white w-[70%] lg:w-[35%] ">
+          <h1 className="text-xl md:text-4xl font-bold">NOOR UL HASANAT</h1>
           </div>
-          <div className="hidden lg:flex space-x-7   justify-end pr-4 text-white w-[50%]">
+          <div className="hidden lg:flex lg:w-[45%] space-x-7  justify-end pr-4 text-white w-[0%] b">
             <a href="#home" onClick={(e) => handleScroll(e, 'home')}>HOME</a>
             <a href="#about" onClick={(e) => handleScroll(e, 'about')}>ABOUT ME</a>
             <a href="#projects" onClick={(e) => handleScroll(e, 'projects')}>PROJECTS</a>
             <a href="#services" onClick={(e) => handleScroll(e, 'services')}>SERVICES</a>
             <a href="#contact" onClick={(e) => handleScroll(e, 'contact')}>CONTACT ME</a>
           </div>        
-          <div className=':w-[20%] justify-center flex '>
+          <div className='w-[20%] justify-end flex '>
             <button className="hidden lg:flex bg-blue-400 text-white ml-6 px-6 py-4 rounded-[44px] hover:bg-gray-900 hover:border-2 border-white font-semibold" onClick={(e) => handleScroll(e, 'contact')}>
               LETS' TALK </button>
-              <button className='ml-2 lg:hidden' onClick={handelopen}> <ListSharpIcon style={{ color: ' white',height: '48px', width: '48px', border:'1px solid white', borderRadius :'8px',  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}/></button>
+              <button className=' lg:hidden' onClick={handelopen}> <ListSharpIcon style={{ color: ' white',height: '32px', width: '32px', border:'1px solid white', borderRadius :'8px',  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}/></button>
           </div>       
       </div>
       {/* NAVBAR END HERE */}
 
 
       {/* PARENT DIV SECTION */}
-      <div className=''>
+      <div className='bg-red-400'>
 
         {/* DROPDOWN NAVBAR */}
-      <div className={open?'  bg-[#143d63]  text-white fixed z-50  right-0 flex py-4  mt-[86px] mr-[50px] rounded-xl':'hidden'}>       
+      <div className={open?'  bg-[#143d63]  text-white fixed z-50  right-0 flex py-4  mt-[80px]  rounded-xl':'hidden'}>       
           <ul className='px-5 text-white text-sm'>
           <li className='py-1 '>  <a href="#home" onClick={(e) => {handleScroll(e, 'home');handelopen();}}>HOME</a></li>
           <li className='py-1'>  <a href="#about" onClick={(e) => {handleScroll(e, 'about');handelopen();}}>ABOUT ME</a></li>
@@ -193,24 +193,24 @@ const handleAnimationIteration = () => {
 
 
         {/*   HOME SECTION START*/}
-        <div className="lg:flex bg-[#041c33] p-10 min-h-screen border-b-8 border-white pt-[240px]" id='home'>
+        <div className="lg:flex bg-[#041c33] p-10 min-h-screen border-b-8 border-white pt-[100px] md:pt-[200px] w-full" id='home'>
           {/* HOME-LEFT */}
           <div className="px-0 sm:px-20  lg:px-5   w-full lg:w-1/2 h-full ">
             <div className="">
               <div className="">
                 <h2 className="text-sm font-semibold uppercase bg-[#142c7a] text-white px-2 py-1 inline-block rounded">N O O R - U L - H A S A N A T</h2>
               </div>
-              <h3 className="lg:text-6xl text-4xl font-bold text-white mt-2 mb-6">
+              <h3 className="lg:text-6xl md:text-4xl text-xl font-bold text-white mt-2 mb-6">
                 HAY I'M HASANAT </h3>
-              <h1 className=" lg:text-6xl text-5xl mt-2 font-bold text-blue-500" id='has'  onAnimationIteration={handleAnimationIteration}>I'M A De{heading}</h1>
-              <h6 className="text-white my-8  font-semibold lg:text-xl text-lg">Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment.
-              </h6>
+              <h1 className=" lg:text-6xl md:text-5xl text-xl mt-2 font-bold text-blue-500" id='has'  onAnimationIteration={handleAnimationIteration}>I'M A De{heading}</h1>
+              <p className="text-white my-8  font-semibold lg:text-xl text-lg">Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment.
+              </p>
               </div>
-              <div className='flex space-x-10 w-full'>
+              <div className='flex  space-x-10 w-full '>
                 <button className="bg-[#0788ff] text-white px-8 py-3 rounded-full hover:bg-gray-900 hover:border-2 border-white" onClick={(e) => handleScroll(e, 'contact')}>
                   GET IN TOUCH ~
                 </button>
-                <div className='flex space-x-2 items-center'>
+                <div className='flex pt-1 lg:pt-0 space-x-2 items-center'>
                   <a href="https://www.facebook.com/" className="text-gray-600 hover:text-gray-900 transition-colors"><FacebookSharpIcon style={{ color: 'white', fontSize: 35, }} /></a>
                   <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" className="text-gray-600 hover:text-gray-900 transition-colors"><LinkedInIcon style={{ color: 'white', fontSize: 35 }} /></a>
                   <a href="https://twitter.com/login?" className="text-gray-600 hover:text-gray-900 transition-colors"><XIcon style={{ color: 'white', fontSize: 30 }} /></a>
@@ -219,7 +219,7 @@ const handleAnimationIteration = () => {
             
           </div>
           {/* HOME RIGHT */}
-          <div className='w-gull lg:w-1/2 h-full px-0 sm:px-20 lg:px-2 py-8 lg:py-0'>
+          <div className='w-full lg:w-1/2 h-full px-0 sm:px-6 lg:px-2 py-4 lg:py-0 '>
             <img src={tasveer} alt='hasnat' className='w-full object-center h-fit shadow-xl rounded-3xl' />
           </div>
         </div>
@@ -227,7 +227,8 @@ const handleAnimationIteration = () => {
 
 
         {/*START OF ABOUT ME*/}
-        <div className='lg:flex bg-[#041c33] p-10 w-full min-h-screen border-b-8 border-white pt-[140px]' id='about'>        
+       
+           <div className='lg:flex bg-[#041c33] p-10 w-full min-h-screen border-b-8 border-white pt-[140px]' id='about'>        
         
               {/* Left Column - Content */}
               <div className="lg:w-1/2 w-full lg:relative px-0 sm:px-20 lg:px-0 py-8 lg:py-0 ">
@@ -244,7 +245,7 @@ const handleAnimationIteration = () => {
               </div>
               {/* Right Column - Stats */}
               <div className="lg:w-1/2 w-full flex">
-                <div className='lg:w-[70%] w-[80%] sm:pl-20 lg:pl-0 lg:justify-normal'>
+                <div className='w-[75%] sm:pl-20 lg:pl-0 lg:justify-normal'>
                   <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">ABOUT US</h2>
                   <h3 className="text-lg md:text-4xl font-semibold mb-2 text-white "> I AM AVAILABLE FOR</h3>
                   <h1 className="block text-lg md:text-4xl font-semibold text-blue-500 mb-2">UI UX DESIGN</h1>
@@ -255,7 +256,7 @@ const handleAnimationIteration = () => {
                     also reproduced in their exact original form, accompanied by English versions from the
                     1914 translation by H.Rackham.   </p>
                   <div>
-                    <div className='flex gap-4 md:gap-4 w-full '>
+                    <div className='md:flex gap-4 gap-y-1 grid w-full '>
                       <div className=" bg-slate-800 rounded-xl pl-4 py-3 flex-1">
                         <h2 className="text-3xl md:text-3xl font-medium text-white">280+</h2>
                         <h1 className="mt-2 font-medium text-white">Google <br />Review</h1>
@@ -269,8 +270,8 @@ const handleAnimationIteration = () => {
                         <h1 className="mt-2 font-medium text-white">Awward <br />Winning</h1>
                       </div>
                     </div>
-                    <div className='w-full fle pt-6 pb-4'>
-                      <button className="bg-[#0788ff] text-white px-6 py-4 rounded-full hover:bg-gray-900 hover:border-2 border-white w-1/2 " onClick={(e) => handleScroll(e, 'contact')}>
+                    <div className='w-full pt-6 pb-4'>
+                      <button className="bg-[#0788ff] text-white px-6 py-4 rounded-full hover:bg-gray-900 hover:border-2 border-white w-full" onClick={(e) => handleScroll(e, 'contact')}>
                         GET IN TOUCH ~
                       </button>
                     </div>
@@ -281,16 +282,15 @@ const handleAnimationIteration = () => {
                 </div>
               </div>
           
-          
         </div>
         {/*END OF ABOUT ME  */}
 
 
         {/* START OF PROJECTS */}
-        <div className='pl-8 sm:pl-20 pb-8 bg-[#041c33]  border-b-8 border-white pt-[140px]' id='projects'>
+        <div className='pl-8 sm:pl-20 pb-8 bg-[#041c33]  border-b-8 border-white pt-[140px] w-full' id='projects'>
           <div className="">
             <h2 className="text-sm font-semibold uppercase bg-blue-500 text-white px-2 py-1 inline-block rounded">MY WORK</h2>
-            <h3 className="text-5xl font-bold mt-2 text-white">RECENT PROJECT</h3>
+            <h3 className="md:text-5xl text-xl font-bold mt-2 text-white">RECENT PROJECT</h3>
           </div>
           <div className="mt-8 grid md:grid-cols-3 gap-6 px-2">
             {projects.map((project) => (
@@ -315,10 +315,10 @@ const handleAnimationIteration = () => {
 
 
         {/* START OF SERVICES */}
-        <div className='pl-8 sm:pl-20 pt-[140px] pb-8 bg-[#041c33]  border-b-8 border-white' id='services'>
+        <div className='pl-8 sm:pl-20 pt-[140px] pb-8 bg-[#041c33]  border-b-8 border-white w-full' id='services'>
           <div className="">
             <h2 className="text-sm font-semibold uppercase bg-blue-800 text-white px-2 py-1 inline-block rounded">S E R V I C E S</h2>
-            <h3 className="text-4xl font-bold mt-2 text-white">DESIGN <span className='text-blue-500' >SERVICES</span> I AM PROVIDING </h3>
+            <h3 className="md:text-4xl text-xl font-bold mt-2 text-white">DESIGN <span className='text-blue-500' >SERVICES</span> I AM PROVIDING </h3>
           </div>
           <div className="mt-8 grid md:grid-cols-4 gap-3 px-2">
             {Services.map((service) => (
@@ -364,7 +364,7 @@ const handleAnimationIteration = () => {
               {/* right */}
               <div className=' w-full lg:w-[70%] px-0 sm:px-20 lg:px-0'>
                 <div className='px-8'>
-                  <h1 className="text-3xl md:text-4xl font-bold text-white">Let's Discuss Your Project</h1>
+                  <h1 className="text-xl md:text-4xl font-bold text-white">Let's Discuss Your Project</h1>
                   <p className="text-gray-400 mt-2">Always available for freelancing if the right project comes along, <br />Feel free to contact me.</p>
                 </div>
                 {/* <!-- Right Section: Contact Form --> */}
