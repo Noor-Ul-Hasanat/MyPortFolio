@@ -200,9 +200,9 @@ const handleAnimationIteration = () => {
               <div className="">
                 <h2 className="text-sm font-semibold uppercase bg-[#142c7a] text-white px-2 py-1 inline-block rounded">N O O R - U L - H A S A N A T</h2>
               </div>
-              <h3 className="lg:text-6xl md:text-4xl text-xl font-bold text-white mt-2 mb-6">
+              <h3 className="lg:text-6xl md:text-4xl text-2xl font-bold text-white mt-2 mb-6">
                 HAY I'M HASANAT </h3>
-              <h1 className=" lg:text-6xl md:text-5xl text-2xl mt-2 font-bold text-blue-500" id='has'  onAnimationIteration={handleAnimationIteration}>I'M A De{heading}</h1>
+              <h1 className=" lg:text-6xl md:text-5xl text-3xl mt-2 font-bold text-blue-500" id='has'  onAnimationIteration={handleAnimationIteration}>I'M A De{heading}</h1>
               <p className="text-white my-8  font-semibold lg:text-xl text-lg">Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment.
               </p>
               </div>
@@ -271,7 +271,7 @@ const handleAnimationIteration = () => {
                       </div>
                     </div>
                     <div className='w-full pt-6 pb-4'>
-                      <button className="bg-[#0788ff] text-white px-6 py-4 rounded-full hover:bg-gray-900 hover:border-2 border-white w-full" onClick={(e) => handleScroll(e, 'contact')}>
+                      <button className="bg-[#0788ff] text-white  px-2 lg:px-8 py-1 lg:py-3 rounded-full hover:bg-gray-900 hover:border-2 border-white w-fit" onClick={(e) => handleScroll(e, 'contact')}>
                         GET IN TOUCH ~
                       </button>
                     </div>
