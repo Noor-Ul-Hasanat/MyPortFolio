@@ -155,7 +155,7 @@ const handleAnimationIteration = () => {
     <div className='w-full min-h-screen font-sans'>
       <CursorDot/>
       {/* NAVBAR START */}
-      <div className=" bg-blue-950 px-12 fixed w-full z-50 flex items-center h-[80px] md:h-[120px]  " >
+      <div className=" bg-blue-950 pl-12 pr-2 fixed w-full z-50 flex items-center h-[80px] md:h-[120px]  " >
         <div className=" py-6 text-white w-[70%] lg:w-[35%] ">
           <h1 className="text-xl md:text-4xl font-bold">NOOR UL HASANAT</h1>
           </div>
@@ -179,7 +179,7 @@ const handleAnimationIteration = () => {
       <div className='bg-red-400'>
 
         {/* DROPDOWN NAVBAR */}
-      <div className={open?'  bg-[#143d63]  text-white fixed z-50  right-0 flex py-4  mt-[80px]  rounded-xl':'hidden'}>       
+      <div className={open?'  bg-[#143d63]  text-white fixed z-50  right-0 flex py-4 mr-2 mt-[80px] rounded-xl':'hidden'}>       
           <ul className='px-5 text-white text-sm'>
           <li className='py-1 '>  <a href="#home" onClick={(e) => {handleScroll(e, 'home');handelopen();}}>HOME</a></li>
           <li className='py-1'>  <a href="#about" onClick={(e) => {handleScroll(e, 'about');handelopen();}}>ABOUT ME</a></li>
@@ -202,12 +202,12 @@ const handleAnimationIteration = () => {
               </div>
               <h3 className="lg:text-6xl md:text-4xl text-xl font-bold text-white mt-2 mb-6">
                 HAY I'M HASANAT </h3>
-              <h1 className=" lg:text-6xl md:text-5xl text-xl mt-2 font-bold text-blue-500" id='has'  onAnimationIteration={handleAnimationIteration}>I'M A De{heading}</h1>
+              <h1 className=" lg:text-6xl md:text-5xl text-2xl mt-2 font-bold text-blue-500" id='has'  onAnimationIteration={handleAnimationIteration}>I'M A De{heading}</h1>
               <p className="text-white my-8  font-semibold lg:text-xl text-lg">Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment.
               </p>
               </div>
               <div className='flex  space-x-10 w-full '>
-                <button className="bg-[#0788ff] text-white px-8 py-3 rounded-full hover:bg-gray-900 hover:border-2 border-white" onClick={(e) => handleScroll(e, 'contact')}>
+                <button className="bg-[#0788ff] text-white px-2 lg:px-8 py-1 lg:py-3 rounded-full hover:bg-gray-900 hover:border-2 border-white" onClick={(e) => handleScroll(e, 'contact')}>
                   GET IN TOUCH ~
                 </button>
                 <div className='flex pt-1 lg:pt-0 space-x-2 items-center'>
@@ -228,7 +228,7 @@ const handleAnimationIteration = () => {
 
         {/*START OF ABOUT ME*/}
        
-           <div className='lg:flex bg-[#041c33] p-10 w-full min-h-screen border-b-8 border-white pt-[140px]' id='about'>        
+           <div className='lg:flex bg-[#041c33] p-10 w-full min-h-screen border-b-8 border-white pt-[60px] md:pt-[140px]' id='about'>        
         
               {/* Left Column - Content */}
               <div className="lg:w-1/2 w-full lg:relative px-0 sm:px-20 lg:px-0 py-8 lg:py-0 ">
@@ -287,7 +287,7 @@ const handleAnimationIteration = () => {
 
 
         {/* START OF PROJECTS */}
-        <div className='pl-8 sm:pl-20 pb-8 bg-[#041c33]  border-b-8 border-white pt-[140px] w-full' id='projects'>
+        <div className='pl-8 sm:pl-20 pb-8 bg-[#041c33]  border-b-8 border-white pt-[60px] md:pt-[140px] w-full' id='projects'>
           <div className="">
             <h2 className="text-sm font-semibold uppercase bg-blue-500 text-white px-2 py-1 inline-block rounded">MY WORK</h2>
             <h3 className="md:text-5xl text-xl font-bold mt-2 text-white">RECENT PROJECT</h3>
@@ -315,7 +315,7 @@ const handleAnimationIteration = () => {
 
 
         {/* START OF SERVICES */}
-        <div className='pl-8 sm:pl-20 pt-[140px] pb-8 bg-[#041c33]  border-b-8 border-white w-full' id='services'>
+        <div className='pl-8 sm:pl-20 pt-[60px] md:pt-[140px] pb-8 bg-[#041c33]  border-b-8 border-white w-full' id='services'>
           <div className="">
             <h2 className="text-sm font-semibold uppercase bg-blue-800 text-white px-2 py-1 inline-block rounded">S E R V I C E S</h2>
             <h3 className="md:text-4xl text-xl font-bold mt-2 text-white">DESIGN <span className='text-blue-500' >SERVICES</span> I AM PROVIDING </h3>
@@ -342,7 +342,7 @@ const handleAnimationIteration = () => {
 
 
         {/* contact me */}
-        <div className='pt-[140px] bg-[#041c33]' id='contact'>        
+        <div className='pt-[60px] md:pt-[140px] bg-[#041c33]' id='contact'>        
             <div className=' px-0 sm:px-20 py-20 lg:flex lg:flex-row bg-[#04294a] rounded-2xl shadow-lg w-full flex flex-col-reverse'>
               {/* left */}
               <div className="w-full lg:w-[30%] lg:justify-center lg:grid lg:pl-6 flex py-10 lg:py-0 px-10 sm:px-24 lg:px-0">
@@ -388,7 +388,9 @@ const handleAnimationIteration = () => {
                       <label className="block text-gray-200">YOUR MESSAGE</label>
                       <textarea placeholder="Your message *" className="w-full p-3 h-32 bg-gray-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
                     </div>
-                    <button type="submit" className="w-full bg-blue-500 hover:bg-gray-900 hover:border-2 border-white text-white py-5 rounded-full font-semibold">SEND MESSAGE</button>
+                    <div className='justify-center flex'>
+                    <button type="submit" className="w-1/2 bg-blue-500 hover:bg-gray-900 hover:border-2 border-white text-white py-1 lg:py-5 rounded-full font-normal lg:font-semibold">SEND MESSAGE</button>
+                    </div>
                   </form>
                 </div>
               </div>
