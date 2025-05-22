@@ -11,9 +11,11 @@ import ListSharpIcon from '@mui/icons-material/ListSharp';
 import tasveer from '../assets/hasnat.jpeg'
 import tasveer2 from '../assets/hasanat.jpeg'
 import circle from '../assets/circlee(1).png'
-import image1 from '../assets/image 1.jpg'
-import image2 from '../assets/image 2.jpg'
-import image3 from '../assets/image 4.jpg'
+import image1 from '../assets/Image1.jpg'
+import image2 from '../assets/Image2.jpg'
+import image3 from '../assets/Image3.jpg'
+import image5 from '../assets/image5.png'
+import Image4 from '../assets/Image4.jpg'
 import image4 from '../assets/hasnat3.jpg'
 import bgwebdesign from '../assets/webdesign.jpg'
 import bgwebdevo from '../assets/webdevelopment.jpg'
@@ -67,28 +69,34 @@ export default function App() {
       </div>
     </div>
   );
-}
-
-
-
-
+};
 export const Main = () => {
 
   const projects = [
     {
-      title: "Website Design",
-      description: "Web Design, App Design",
+      title: "Ethernal Exchange",
+      description: "Responsive multi-functional crypto exchange platform built with React.js, Tailwind CSS, Redux Toolkit, and React Router – includes advanced trading features and modern UI/UX.",
       image: image1,
     },
     {
-      title: "Website Design",
-      description: "Web Design, App Design",
+      title: "Profit Seeker",
+      description: "Multi-functional shop and e-commerce management app built with React Native – manage inventory, billing, and orders with built-in receipt printing support.",
       image: image2,
     },
     {
-      title: "Dashboard Design",
-      description: "Web Design, App Design",
+      title: "Portfolio Website",
+      description: "Personal portfolio website showcasing projects, skills, and experience – fully responsive with a modern UI/UX design.",
       image: image3,
+    },
+    {
+      title: "mvm-Health",
+      description: "Online doctor consultation and insurance management website built with React.js – fully responsive, with real-time API calls and advanced healthcare features.",
+      image: Image4,
+    },
+    {
+      title: "Project Bae",
+     description: "Contributed to an existing React.js healthcare platform by updating key screens and integrating real-time APIs for improved functionality.",
+      image: image5,
     },
   ];
 
@@ -167,7 +175,7 @@ const handleAnimationIteration = () => {
             <a href="#contact" onClick={(e) => handleScroll(e, 'contact')}>CONTACT ME</a>
           </div>        
           <div className='w-[20%] justify-end flex '>
-            <button className="hidden lg:flex bg-blue-400 text-white ml-6 px-6 py-4 rounded-[44px] hover:bg-gray-900 hover:border-2 border-white font-semibold" onClick={(e) => handleScroll(e, 'contact')}>
+            <button className="hidden lg:flex bg-blue-400 text-white ml-6 px-6 py-4 rounded-[44px] hover:bg-gray-900 hover:border-2 border-white font-semibold  hover:scale-110 transition-transform" onClick={(e) => handleScroll(e, 'contact')}>
               LETS' TALK </button>
               <button className=' lg:hidden' onClick={handelopen}> <ListSharpIcon style={{ color: ' white',height: '32px', width: '32px', border:'1px solid white', borderRadius :'8px',  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}/></button>
           </div>       
@@ -207,7 +215,7 @@ const handleAnimationIteration = () => {
               </p>
               </div>
               <div className='flex  space-x-10 w-full '>
-                <button className="bg-[#0788ff] text-white px-2 lg:px-8 py-1 lg:py-3 rounded-full hover:bg-gray-900 hover:border-2 border-white" onClick={(e) => handleScroll(e, 'contact')}>
+                <button className="bg-[#0788ff] text-white px-2 lg:px-8 py-1 lg:py-3 rounded-full hover:bg-gray-900 hover:border-2 border-white hover:scale-110 transition-transform" onClick={(e) => handleScroll(e, 'contact')}>
                   GET IN TOUCH ~
                 </button>
                 <div className='flex pt-1 lg:pt-0 space-x-2 items-center'>
@@ -271,7 +279,7 @@ const handleAnimationIteration = () => {
                       </div>
                     </div>
                     <div className='w-full pt-6 pb-4'>
-                      <button className="bg-[#0788ff] text-white  px-2 lg:px-8 py-1 lg:py-3 rounded-full hover:bg-gray-900 hover:border-2 border-white w-fit" onClick={(e) => handleScroll(e, 'contact')}>
+                      <button className="bg-[#0788ff] text-white  px-2 lg:px-8 py-1 lg:py-3 rounded-full hover:bg-gray-900 hover:border-2 border-white w-fit  hover:scale-110 transition-transform" onClick={(e) => handleScroll(e, 'contact')}>
                         GET IN TOUCH ~
                       </button>
                     </div>
@@ -389,7 +397,7 @@ const handleAnimationIteration = () => {
                       <textarea placeholder="Your message *" className="w-full p-3 h-32 bg-gray-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
                     </div>
                     <div className='justify-center flex'>
-                    <button type="submit" className="w-1/2 bg-blue-500 hover:bg-gray-900 hover:border-2 border-white text-white py-1 lg:py-5 rounded-full font-normal lg:font-semibold">SEND MESSAGE</button>
+                    <button type="submit" className="w-1/2 bg-blue-500 hover:bg-gray-900 hover:border-2 border-white text-white py-1 lg:py-3 rounded-full font-normal lg:font-semibold ">SEND MESSAGE</button>
                     </div>
                   </form>
                 </div>
