@@ -3,3 +3,13 @@
 @tailwind utilities;
 
 
+.swiper-pagination-bullet {
+  @apply bg-blue-500 opacity-75;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-blue-700 opacity-100;
+}
+.swiper-pagination {
+  @apply relative mt-4 flex justify-center;
+}

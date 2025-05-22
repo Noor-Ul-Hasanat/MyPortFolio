@@ -21,6 +21,11 @@ import bgwebdesign from '../assets/webdesign.jpg'
 import bgwebdevo from '../assets/webdevelopment.jpg'
 import bgmobdevlop from '../assets/mob-development.png'
 import bggraphics from '../assets/graphics.jpg'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import '@tailwindcss/line-clamp'
 
 // FUNCTION FOR CURSER ANIMATION
 function CursorDot() {
@@ -71,56 +76,95 @@ export default function App() {
   );
 };
 export const Main = () => {
+  
+ const [selectedProject, setSelectedProject] = useState(null);
 
+  const openModal = (project) => setSelectedProject(project);
+  const closeModal = () => setSelectedProject(null);
+  
   const projects = [
     {
+        id: 1,
       title: "Ethernal Exchange",
-      description: "Responsive multi-functional crypto exchange platform built with React.js, Tailwind CSS, Redux Toolkit, and React Router – includes advanced trading features and modern UI/UX.",
+      description: "A fully responsive, multi-functional cryptocurrency exchange platform inspired by Binance, developed using modern frontend technologies including React.js, Tailwind CSS, Redux Toolkit, and React Router. The platform delivers a seamless and scalable trading experience, incorporating real-time data updates, responsive layouts, and modular component architecture.Custom hooks and form validation for user input handling Charting libraries (e.g., Chart.js or Recharts) for interactive price graphs API integration with mock REST and/or WebSocket services to simulate order book, market history, and asset prices",
       image: image1,
+      type: "Web Site",
+      language: "HTML CSS JS NODE",
+      platform: "React js",
+      country: "Pakistan",
+      url: "",
     },
     {
+        id: 2,
       title: "Profit Seeker",
-      description: "Multi-functional shop and e-commerce management app built with React Native – manage inventory, billing, and orders with built-in receipt printing support.",
+      description: "A comprehensive and multi-functional shop and e-commerce management application built with React Native, designed for both Android and iOS platforms. The app enables users to efficiently manage inventory, billing, customer orders, and product listings. It includes integrated support for thermal receipt printing, real-time order tracking, and automated stock updates. Built using Redux for state management, TypeScript for scalability, and React Navigation for seamless routing. Features include barcode scanning, offline data sync, push notifications, and integration with payment gateways, making it ideal for modern retail and shop management workflows.",
       image: image2,
+      type: "Android App",
+      language: "HTML CSS JS NODE",
+      platform: "React Native",
+      country: "Pakistan",
+      url: "",
     },
     {
+        id: 3,
       title: "Portfolio Website",
-      description: "Personal portfolio website showcasing projects, skills, and experience – fully responsive with a modern UI/UX design.",
+      description: "A professional personal portfolio website designed to showcase projects, technical skills, and professional experience. Built using React.js and styled with Tailwind CSS, the site features a clean, responsive design with smooth animations and interactive UI/UX elements. It includes dedicated sections for About Me, Projects, Services, and Contact, enhanced with Material UI icons and a custom animated cursor for a dynamic feel. The site is optimized for both desktop and mobile devices, with SEO-friendly structure, fast load times, and accessible navigation to ensure a seamless user experience across all platforms.",
       image: image3,
+      type: "Web Site",
+      language: "HTML CSS JS",
+      platform: "React js",
+      country: "Pakistan",
+      url: "",
     },
     {
+      id: 4,
       title: "mvm-Health",
-      description: "Online doctor consultation and insurance management website built with React.js – fully responsive, with real-time API calls and advanced healthcare features.",
+      description: "A comprehensive online doctor consultation and insurance management platform developed using React.js, offering real-time communication, appointment booking, and insurance eligibility checking. The application is fully responsive with a modern and intuitive UI/UX design, ensuring a seamless experience across all devices. It integrates secure API calls for real-time health data processing, patient record management, and prior authorization workflows. Built with Redux Toolkit for efficient state management, React Router for smooth navigation, and Tailwind CSS for rapid styling. The platform supports dynamic form handling, authentication, and advanced features tailored to digital healthcare workflows and insurance processes.",
       image: Image4,
+      type: "Web Site",
+      language: "HTML CSS JS NODE",
+      platform: "next js",
+      country: "Pakistan",
+      url: "",
     },
     {
+        id: 5,
       title: "Project Bae",
-     description: "Contributed to an existing React.js healthcare platform by updating key screens and integrating real-time APIs for improved functionality.",
+      description: "Actively contributed to the development and enhancement of an existing healthcare web platform built with React.js. Responsibilities included updating and optimizing multiple key screens for improved user experience, implementing new UI components, and integrating real-time APIs to fetch and display dynamic medical and insurance data. Leveraged Redux Toolkit for scalable state management and React Router for seamless navigation. Worked closely with backend APIs to ensure accurate healthcare workflows, including patient data handling and insurance eligibility checks. Focused on responsiveness, accessibility, and performance to support both patients and healthcare providers effectively.",
       image: image5,
+      type: "We Site",
+      language: "HTML CSS JS ",
+      platform: "React js",
+      country: "Pakistan",
+      url: "",
     },
   ];
 
 
   const Services = [
     {
+      id: 1,
       title: "Website Design",
       description: "Designing intuitive and aesthetic web interfaces with a focus on user experience, creativity, and modern UI/UX principles",
       bgimage: bgwebdesign,
       Icon: <BrushSharpIcon style={{ color: 'white', height: '28px', width: '28px' }} />
     },
     {
+      id: 2,
       title: "Website Development",
       description: " Building dynamic and responsive websites using modern frameworks and technologies to ensure seamless user experiences.",
       bgimage: bgwebdevo,
       Icon: <CodeSharpIcon style={{ color: 'white', height: '28px', width: '36px' }} />
     },
     {
+      id: 3,
       title: "Mobile App Development",
       description: "Creating high-performance, user-friendly mobile applications for Android and iOS using native and cross-platform solutions",
       bgimage: bgmobdevlop,
       Icon: <PhoneIphoneSharpIcon style={{ color: 'white', height: '28px', width: '28px' }} />
     },
     {
+      id: 4,
       title: "Graphics Design",
       description: "Crafting visually appealing designs, including logos, branding materials, and digital content, to enhance brand identity.",
       bgimage: bggraphics,
@@ -300,24 +344,43 @@ const handleAnimationIteration = () => {
             <h2 className="text-sm font-semibold uppercase bg-blue-500 text-white px-2 py-1 inline-block rounded">MY WORK</h2>
             <h3 className="md:text-5xl text-xl font-bold mt-2 text-white">RECENT PROJECT</h3>
           </div>
-          <div className="mt-8 grid md:grid-cols-3 gap-6 px-2">
-            {projects.map((project) => (
-              <div key={project} className="bg-white  rounded-xl overflow-hidden shadow-lg ">
-                <div className="  rounded-xl overflow-hidden p-2 h-[250px]">
-                  <img src={project.image} alt={project.title} className="w-full h-full hover:scale-110 transition-transform rounded-xl" />
-                </div>
-                <div className="p-4 pt-6 text-black flex ">
-                  <div className=' flex-grow'>
-                    <h4 className="font-bold text-xl">{project.title}</h4>
-                    <p className="text-gray-600">{project.description}</p>
-                  </div>
-                  <div className="  justify-center items-center flex">
-                    <button className=" rounded-[100%] border-2 border-black bg-blue-600 px-3 py-3"><EastIcon style={{ color: 'white' }} /></button>
-                  </div>
-                </div>
-              </div>
-            ))}
+         <Swiper
+  slidesPerView={1}
+  spaceBetween={20}
+  breakpoints={{
+    640: { slidesPerView: 1.2 },
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 }
+  }}
+  pagination={{ clickable: true }}
+  modules={[Pagination]}
+  className="mySwiper "
+>
+  {projects.map((project, id) => (
+    <SwiperSlide key={id}>
+      <div className="bg-white rounded-xl overflow-hidden shadow-lg mt-4">
+        <div className="rounded-xl overflow-hidden p-2 h-[250px]">
+          <img src={project.image} alt={project.title} className="w-full h-full hover:scale-110 transition-transform rounded-xl" />
+        </div>
+        <div className="p-4 pt-6 text-black flex">
+          <div className='flex-grow'>
+            <h4 className="font-bold text-xl">{project.title}</h4>
+           <p className="text-gray-600 line-clamp-3" title={project.description}>
+  {project.description}
+</p>
           </div>
+          <div className="justify-center items-center flex">
+            <button className="rounded-[100%] border-2 border-black bg-blue-600 px-3 py-3"
+            onClick={() => openModal(project)}>
+              <EastIcon style={{ color: 'white' }} />
+            </button>
+          </div>
+        </div>
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
         </div>
         {/* END OF PROJECTS  */}
 
@@ -410,6 +473,59 @@ const handleAnimationIteration = () => {
 
 
       </div>
+
+     {/* Modal */}
+{selectedProject && (
+  <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
+    <div className="bg-white rounded-lg p-6 max-w-6xl w-full relative overflow-hidden h-[600px]">
+      {/* Close Button */}
+      <button
+        onClick={closeModal}
+        className="absolute top-2 right-4 text-gray-500 text-xl font-bold hover:text-black"
+      >
+        ×
+      </button>
+
+      <div className="flex flex-col md:flex-row gap-6 h-full">
+        {/* Image */}
+        <div className="w-full md:w-[60%] h-full">
+          <img
+            src={selectedProject.image}
+            alt={selectedProject.title}
+            className="rounded-lg w-full h-full object-center"
+          />
+        </div>
+
+        {/* Info */}
+        <div className="w-full md:w-[40%] h-full flex flex-col justify-between">
+          <div>
+            <h2 className="text-2xl font-semibold mb-4 border-b-2 border-gray-700 py-3">{selectedProject.title}</h2>
+            <p className="text-gray-700 mb-4">{selectedProject.description}</p>
+          </div>
+
+          <ul className="text-sm text-gray-600 space-y-1 pb-8">
+            <li><strong>Type:       </strong> {selectedProject.type}</li>
+            <li><strong>Languages:  </strong> {selectedProject.language}</li>
+            <li><strong>Platform:   </strong> {selectedProject.platform}</li>
+            <li><strong>Country:    </strong> {selectedProject.country}</li>
+            <li>
+              <strong>Live URL:</strong>{" "}
+              <a
+                href={selectedProject.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-600 underline"
+              >
+                {selectedProject.url}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
       {/* end of main */}
     </div>
   )
