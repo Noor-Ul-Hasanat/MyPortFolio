@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MyPortFolio/static/css/main.c9c8d831.css",
-    "main.js": "/MyPortFolio/static/js/main.986d36c9.js",
+    "main.css": "/MyPortFolio/static/css/main.4e90e834.css",
+    "main.js": "/MyPortFolio/static/js/main.94f1d0d8.js",
     "static/js/488.0cd2fa8b.chunk.js": "/MyPortFolio/static/js/488.0cd2fa8b.chunk.js",
     "static/media/circlee(1).png": "/MyPortFolio/static/media/circlee(1).71ba9e5d078d1d6cb0ff.png",
     "static/media/mob-development.png": "/MyPortFolio/static/media/mob-development.1b14e5e9d789cde4176a.png",
@@ -17,12 +17,12 @@
     "static/media/webdesign.jpg": "/MyPortFolio/static/media/webdesign.fe2b234f57ed2241b9fb.jpg",
     "static/media/graphics.jpg": "/MyPortFolio/static/media/graphics.07e0ba378c22c5a7716c.jpg",
     "index.html": "/MyPortFolio/index.html",
-    "main.c9c8d831.css.map": "/MyPortFolio/static/css/main.c9c8d831.css.map",
-    "main.986d36c9.js.map": "/MyPortFolio/static/js/main.986d36c9.js.map",
+    "main.4e90e834.css.map": "/MyPortFolio/static/css/main.4e90e834.css.map",
+    "main.94f1d0d8.js.map": "/MyPortFolio/static/js/main.94f1d0d8.js.map",
     "488.0cd2fa8b.chunk.js.map": "/MyPortFolio/static/js/488.0cd2fa8b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9c8d831.css",
-    "static/js/main.986d36c9.js"
+    "static/css/main.4e90e834.css",
+    "static/js/main.94f1d0d8.js"
   ]
 }
